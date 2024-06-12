@@ -1,12 +1,12 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import styles from './index.module.less'
-import {Table, Button, PopConfirm} from 'tdesign-react';
-import {PrimaryTableCol} from "tdesign-react/es/table/type";
-import {request} from "../../../utils/axios";
-import {getComponentTokenRequest, getTicketRequest} from "../../../utils/apis";
+import { Table, Button, PopConfirm } from 'tdesign-react';
+import { PrimaryTableCol } from "tdesign-react/es/table/type";
+import { request } from "../../../utils/axios";
+import { getComponentTokenRequest, getTicketRequest } from "../../../utils/apis";
 import moment from "moment";
-import {copyMessage} from "../../../utils/common";
-import {routes} from "../../../config/route";
+import { copyMessage } from "../../../utils/common";
+import { routes } from "../../../config/route";
 
 const componentTokenColumn: PrimaryTableCol[] = [{
     align: 'left',
@@ -125,7 +125,7 @@ export default function ThirdToken() {
                 size="small"
             />
 
-            <p style={{marginTop: '40px'}} className="text">component_access_token 介绍</p>
+            <p style={{ marginTop: '40px' }} className="text">component_access_token 介绍</p>
             <div className="normal_flex" style={{ flexWrap: 'nowrap', alignItems: 'center' }}>
                 <div className="blue_circle" />
                 <p className="desc" style={{ margin: '0' }}>component_access_token 是第三方平台接口的调用凭据。令牌的获取是有限制的，每个令牌的有效期为 2 小时，请自行做好令牌的管理，在令牌快过期时（比如1小时50分），重新调用接口获取。接口详情可查看<a href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/2.0/api/ThirdParty/token/component_access_token.html" target="_blank" className="a">官方文档</a></p>
